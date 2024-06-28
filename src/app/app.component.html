@@ -3,12 +3,13 @@
     <h1> {{ title }}</h1>
   </div>
   <div class="ash">
-    <div *ngIf="showhobbies()" class="component2">
+    <button (click)="toggleHobbies()" class="btn">Mostrar hobbies</button>
+    <div *ngIf="showHobbies" class="component2">
       <h2>{{ name }}</h2>
       <h2>{{ email }}</h2>
       <h3>Hobbies: </h3>
       <ul>
-        <li *ngFor="let hobby of hobbies"> {{hobbies}}</li>
+        <li *ngFor="let hobby of hobbies"> {{hobby}}</li>
       </ul>
     </div>
     <a href="{{webpage}}" target="_blank">Visita mi sitio web</a>
