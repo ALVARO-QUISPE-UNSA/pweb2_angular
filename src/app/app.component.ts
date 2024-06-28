@@ -15,14 +15,16 @@ export class AppComponent {
   email;
   webpage : string;
   hobbies : string[];
+  showHobbies: boolean;
   constructor() {
     console.log("constructor trabajando...");
     this.name = "Álvaro Raúl Quispe Condori";
     this.email = "aquispecondo@unsa.edu.pe";
     this.webpage = "https://github.com/ALVARO-QUISPE-UNSA";
     this.hobbies = ["P competitiva", "Política", "Ejercicios"]
+    this.showHobbies = false;
   }
-  showhobbies() {
-    return true;
+  toggleHobbies() {
+    this.showHobbies = !this.showHobbies;
   }
 }
