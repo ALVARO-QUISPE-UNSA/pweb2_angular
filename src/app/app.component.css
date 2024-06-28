@@ -2,3 +2,12 @@
   background-color: black;
   color: white;
 }
+.ash {
+  background-color: #eee;
+  color: black;
+}
+.component2 {
+  background-color: #555;
+  color: red;
+  padding: 20px;
+}
