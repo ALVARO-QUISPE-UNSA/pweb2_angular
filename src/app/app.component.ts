@@ -11,6 +11,8 @@ import {HelloWorldComponent} from './hello-world/hello-world.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  users = ['Ryan', 'Joe', 'Cameron', 'Jhon'];
+  activated = false;
   title = 'my-dream-app';
   name : string;
   email;
