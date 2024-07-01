@@ -3,11 +3,16 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {HelloWorldComponent} from './hello-world/hello-world.component';
 import {UserComponent} from './user/user.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HelloWorldComponent, UserComponent],
+  imports: [CommonModule, 
+    RouterOutlet, 
+    HelloWorldComponent, 
+    UserComponent,
+    FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -16,12 +21,14 @@ export class AppComponent {
   activated = false;
   title = 'my-dream-app';
   name : string;
+  age: number;
   email;
   webpage : string;
   hobbies : string[];
   showHobbies: boolean;
   constructor() {
     console.log("constructor trabajando...");
+    this.age = 18;
     this.name = "Álvaro Raúl Quispe Condori";
     this.email = "aquispecondo@unsa.edu.pe";
     this.webpage = "https://github.com/ALVARO-QUISPE-UNSA";

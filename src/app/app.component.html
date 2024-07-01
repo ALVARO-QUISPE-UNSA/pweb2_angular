@@ -37,3 +37,11 @@
       {{ user }} <button (click)="deleteUser(user)">Borrar usuario</button>
     </li>
   </ul>
+  <div>
+    <form>
+      <input type="text" name="name" [(ngModel)]="name">
+      <input type="number" name="age"  [(ngModel)]="age">
+    </form>
+    <h2>Name: {{name}}</h2>
+    <h2>Age: {{age}}</h2>
+  </div>
