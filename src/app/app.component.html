@@ -27,3 +27,9 @@
     </li>
   </ul>
   <button (click)="sayhello()">Hazme click</button>
+  <h1>Desde app.component</h1>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user }} <button (click)="deleteUser(user)">Borrar usuario</button>
+    </li>
+  </ul>
