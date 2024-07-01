@@ -13,4 +13,7 @@ export class UserComponent implements OnInit{
   ngOnInit(): void {
     console.log(`El nombre del usuario es: ${this.nameUser}`);
   }
+  sayhello(nameUser:string) {
+    alert("Hola " + nameUser);
+  }
 }
