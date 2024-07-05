@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import {HelloWorldComponent} from './hello-world/hello-world.component';
 import {UserComponent} from './user/user.component';
 import { FormsModule } from '@angular/forms';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms';
     RouterOutlet, 
     HelloWorldComponent, 
     UserComponent,
-    FormsModule],
+    FormsModule,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -26,8 +28,11 @@ email;
 webpage : string;
 hobbies : string[];
 showHobbies: boolean;
-constructor() {
+constructor(private dataService: DataService) {
   console.log("constructor trabajando...");
+  this.dataService.getData().subscribe(data => {
+    console.log(data);
+  });
   this.age = 18;
   this.name = "Álvaro Raúl Quispe Condori";
   this.email = "aquispecondo@unsa.edu.pe";
