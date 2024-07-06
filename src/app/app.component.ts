@@ -6,6 +6,7 @@ import {UserComponent} from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -28,10 +29,12 @@ email;
 webpage : string;
 hobbies : string[];
 showHobbies: boolean;
+posts: any[] = [];
 constructor(private dataService: DataService) {
   console.log("constructor trabajando...");
-  this.dataService.getData().subscribe(data => {
-    console.log(data);
+  this.dataService.getData().subscribe(( data) => {
+    //console.log(data);
+    this.posts = data;
   });
   this.age = 18;
   this.name = "Álvaro Raúl Quispe Condori";

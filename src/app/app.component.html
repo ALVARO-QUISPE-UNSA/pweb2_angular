@@ -45,3 +45,13 @@
     <h2>Name: {{name}}</h2>
     <h2>Age: {{age}}</h2>
   </div>
+  <div class="negro">
+    <h1> {{ title }}</h1>
+  </div>
+  @for (post of posts; track $index) {
+
+  <div class="ash">
+    <h2>{{ post.title }}</h2>
+    <h3>{{ post.body }}</h3>
+  </div>
+  }
