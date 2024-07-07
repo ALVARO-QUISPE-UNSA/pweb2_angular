@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {HelloWorldComponent} from './hello-world/hello-world.component';
 import {UserComponent} from './user/user.component';
@@ -15,6 +15,7 @@ import { DataService } from './data.service';
     HelloWorldComponent, 
     UserComponent,
     FormsModule,
+    RouterModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
